@@ -16,6 +16,8 @@
 		EE1698022709D39C0016D6B3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1698012709D39C0016D6B3 /* Model.swift */; };
 		EE1698042709D4680016D6B3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1698032709D4680016D6B3 /* ViewModel.swift */; };
 		EEDA5098270A07C300C0D49D /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA5097270A07C300C0D49D /* CardView.swift */; };
+		EEDA509B270A1F8E00C0D49D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EEDA5099270A1F8E00C0D49D /* Model.xcdatamodeld */; };
+		EEDA50BC270A210F00C0D49D /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEDA50BB270A210F00C0D49D /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		EE1698012709D39C0016D6B3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		EE1698032709D4680016D6B3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		EEDA5097270A07C300C0D49D /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		EEDA509A270A1F8E00C0D49D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		EEDA50BB270A210F00C0D49D /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +69,9 @@
 				EE1698012709D39C0016D6B3 /* Model.swift */,
 				EE1698032709D4680016D6B3 /* ViewModel.swift */,
 				EE1697FA2709B0E30016D6B3 /* Views */,
+				EEDA50BB270A210F00C0D49D /* Persistence.swift */,
 				EE1697F02709A4A20016D6B3 /* Assets.xcassets */,
+				EEDA5099270A1F8E00C0D49D /* Model.xcdatamodeld */,
 				EE1697F22709A4A20016D6B3 /* Preview Content */,
 			);
 			path = LearnWordsApp;
@@ -160,9 +166,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEDA50BC270A210F00C0D49D /* Persistence.swift in Sources */,
 				EEDA5098270A07C300C0D49D /* CardView.swift in Sources */,
 				EE1698022709D39C0016D6B3 /* Model.swift in Sources */,
 				EE1697FE2709B58C0016D6B3 /* PlayWordsView.swift in Sources */,
+				EEDA509B270A1F8E00C0D49D /* Model.xcdatamodeld in Sources */,
 				EE1697EF2709A4A00016D6B3 /* ContentView.swift in Sources */,
 				EE1698002709B59D0016D6B3 /* AllCardsView.swift in Sources */,
 				EE1698042709D4680016D6B3 /* ViewModel.swift in Sources */,
@@ -371,6 +379,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		EEDA5099270A1F8E00C0D49D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				EEDA509A270A1F8E00C0D49D /* Model.xcdatamodel */,
+			);
+			currentVersion = EEDA509A270A1F8E00C0D49D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EE1697E12709A4A00016D6B3 /* Project object */;
 }
