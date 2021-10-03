@@ -11,10 +11,18 @@ struct PlayWordsView: View {
     @ObservedObject var viewModel = ViewModel()
     var body: some View {
         GeometryReader { g in
-            ZStack {
-                ForEach(viewModel.cards) { card in
-                    Card(card: card, frame: g.frame(in: .global))
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    ZStack {
+                        ForEach(viewModel.cards) { card in
+                            Card(card: card, frame: g.frame(in: .global))
+                        }
+                    }
+                    Spacer()
                 }
+                Spacer()
             }
         }
     }
