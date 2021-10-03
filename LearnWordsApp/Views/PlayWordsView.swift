@@ -18,7 +18,7 @@ struct PlayWordsView: View {
                     ZStack {
                         ForEach(0..<viewModel.cards.count) { index in
                             if !viewModel.cards[index].matchUp {
-                                Card(card: viewModel.cards[index], frame: g.frame(in: .global))
+                                Card(card: viewModel.cards[viewModel.cardRandomName()], frame: g.frame(in: .global))
                             }
                         }
                     }

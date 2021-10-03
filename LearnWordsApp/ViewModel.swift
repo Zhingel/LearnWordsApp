@@ -20,7 +20,7 @@ class ViewModel: ObservableObject {
     ]
     
     func cardRandomName() -> Int {
-        let randomValue = Int.random(in: 0...8)
+        let randomValue = Int.random(in: 0..<cards.count)
         return randomValue
     }
 }

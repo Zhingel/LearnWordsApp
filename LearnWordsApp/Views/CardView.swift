@@ -37,8 +37,10 @@ struct Card: View {
             withAnimation(Animation.easeIn) {
                 if card.offset > 150 {
                     card.offset = 500
+                    card.matchUp.toggle()
                 } else if card.offset < -150 {
                     card.offset = -500
+                    card.matchUp.toggle()
                 } else  {
                     card.offset = 0
                 }
