@@ -18,4 +18,9 @@ class ViewModel: ObservableObject {
                  Word(word: "Eighth", translatedWord: "Восьмой", offset: 0),
                  Word(word: "Ninth", translatedWord: "Девятый", offset: 0)
     ]
+    
+    func cardRandomName() -> Int {
+        let randomValue = Int.random(in: 0...8)
+        return randomValue
+    }
 }

@@ -12,6 +12,6 @@ struct Word: Identifiable {
     var word: String
     var translatedWord: String
     var isFaceUp: Bool = false
-    var MatchUp: Bool = false
+    var matchUp: Bool = false
     var offset: CGFloat
 }

@@ -16,14 +16,17 @@ struct PlayWordsView: View {
                 HStack {
                     Spacer()
                     ZStack {
-                        ForEach(viewModel.cards) { card in
-                            Card(card: card, frame: g.frame(in: .global))
+                        ForEach(0..<viewModel.cards.count) { index in
+                            if !viewModel.cards[index].matchUp {
+                                Card(card: viewModel.cards[index], frame: g.frame(in: .global))
+                            }
                         }
                     }
                     Spacer()
                 }
                 Spacer()
             }
+            .background(Color.black)
         }
     }
 }

@@ -13,8 +13,8 @@ struct Card: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
-              //  .stroke(lineWidth: 3)
-                .foregroundColor(.orange)
+                .foregroundColor(.gray)
+                .shadow(color: .black, radius: 4, x: 5, y: -5)
             if card.isFaceUp {
                 Text(card.word)
             } else {
@@ -27,7 +27,7 @@ struct Card: View {
             card.isFaceUp.toggle()
         }
         .offset(x: card.offset)
-        .rotationEffect(.init(degrees: card.offset == 0 ? 0 : (card.offset > 0 ? 12: -12)))
+        .rotationEffect(.init(degrees: card.offset == 0 ? 0 : (card.offset > 0 ? 10: -10)))
         .gesture(DragGesture()
                 .onChanged({ value in
             withAnimation(.default) {
