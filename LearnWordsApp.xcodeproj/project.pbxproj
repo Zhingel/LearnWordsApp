@@ -11,6 +11,10 @@
 		EE1697EF2709A4A00016D6B3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1697EE2709A4A00016D6B3 /* ContentView.swift */; };
 		EE1697F12709A4A20016D6B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1697F02709A4A20016D6B3 /* Assets.xcassets */; };
 		EE1697F42709A4A20016D6B3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE1697F32709A4A20016D6B3 /* Preview Assets.xcassets */; };
+		EE1697FE2709B58C0016D6B3 /* PlayWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1697FD2709B58C0016D6B3 /* PlayWordsView.swift */; };
+		EE1698002709B59D0016D6B3 /* AllCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1697FF2709B59D0016D6B3 /* AllCardsView.swift */; };
+		EE1698022709D39C0016D6B3 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1698012709D39C0016D6B3 /* Model.swift */; };
+		EE1698042709D4680016D6B3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1698032709D4680016D6B3 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		EE1697EE2709A4A00016D6B3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EE1697F02709A4A20016D6B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE1697F32709A4A20016D6B3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EE1697FD2709B58C0016D6B3 /* PlayWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayWordsView.swift; sourceTree = "<group>"; };
+		EE1697FF2709B59D0016D6B3 /* AllCardsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCardsView.swift; sourceTree = "<group>"; };
+		EE1698012709D39C0016D6B3 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		EE1698032709D4680016D6B3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,9 @@
 			isa = PBXGroup;
 			children = (
 				EE1697EC2709A4A00016D6B3 /* LearnWordsAppApp.swift */,
-				EE1697EE2709A4A00016D6B3 /* ContentView.swift */,
+				EE1698012709D39C0016D6B3 /* Model.swift */,
+				EE1698032709D4680016D6B3 /* ViewModel.swift */,
+				EE1697FA2709B0E30016D6B3 /* Views */,
 				EE1697F02709A4A20016D6B3 /* Assets.xcassets */,
 				EE1697F22709A4A20016D6B3 /* Preview Content */,
 			);
@@ -65,6 +75,16 @@
 				EE1697F32709A4A20016D6B3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EE1697FA2709B0E30016D6B3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE1697EE2709A4A00016D6B3 /* ContentView.swift */,
+				EE1697FD2709B58C0016D6B3 /* PlayWordsView.swift */,
+				EE1697FF2709B59D0016D6B3 /* AllCardsView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +157,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE1698022709D39C0016D6B3 /* Model.swift in Sources */,
+				EE1697FE2709B58C0016D6B3 /* PlayWordsView.swift in Sources */,
 				EE1697EF2709A4A00016D6B3 /* ContentView.swift in Sources */,
+				EE1698002709B59D0016D6B3 /* AllCardsView.swift in Sources */,
+				EE1698042709D4680016D6B3 /* ViewModel.swift in Sources */,
 				EE1697ED2709A4A00016D6B3 /* LearnWordsAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
