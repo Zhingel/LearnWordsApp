@@ -18,9 +18,9 @@ struct PlayWordsView: View {
                 HStack {
                     Spacer()
                     ZStack {
-                        ForEach(0..<words.count) { index in
-                            if !words[index].matchUp {
-                                Card(frame: g.frame(in: .global), data: words[index])
+                        ForEach(words) { word in
+                            if !word.matchUp {
+                                Card(frame: g.frame(in: .global), data: word)
                             }
                         }
                     }
