@@ -8,43 +8,43 @@
 import SwiftUI
 
 struct Card: View {
-    @State var card: Word
     var frame: CGRect
-    @Environment(\.managedObjectContext) var context
     var data : Task!
+    @State var offsetCard: CGFloat = 0
+    @State var isFaceUp = false
     var body: some View {
         ZStack {
             RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))
                 .foregroundColor(.gray)
                 .shadow(color: .black, radius: 4, x: 5, y: -5)
-            if card.isFaceUp {
-                Text(card.word)
+            if isFaceUp {
+                Text(data.word!)
             } else {
-                Text(card.translatedWord)
+                Text(data.translatedWord!)
             }
         }
         .frame(width: 300, height: 250, alignment: .center)
         .font(.title)
         .onTapGesture {
-            card.isFaceUp.toggle()
+            isFaceUp.toggle()
         }
-        .offset(x: card.offset)
-        .rotationEffect(.init(degrees: card.offset == 0 ? 0 : (card.offset > 0 ? 10: -10)))
+        .offset(x: offsetCard)
+        .rotationEffect(.init(degrees: offsetCard == 0 ? 0 : (offsetCard > 0 ? 10: -10)))
         .gesture(DragGesture()
                 .onChanged({ value in
             withAnimation(.default) {
-                        card.offset = value.translation.width
+                offsetCard = value.translation.width
                     }})
                 .onEnded({ value in
             withAnimation(Animation.easeIn) {
-                if card.offset > 150 {
-                    card.offset = 500
-                    card.matchUp.toggle()
-                } else if card.offset < -150 {
-                    card.offset = -500
-                    card.matchUp.toggle()
+                if CGFloat(offsetCard) > 150 {
+                    offsetCard = 500
+                    data.matchUp.toggle()
+                } else if CGFloat(offsetCard) < -150 {
+                    offsetCard = -500
+                    data.matchUp.toggle()
                 } else  {
-                    card.offset = 0
+                    offsetCard = 0
                 }
             }}))
     }

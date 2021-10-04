@@ -10,7 +10,7 @@ import SwiftUI
 struct PlayWordsView: View {
     @StateObject var viewModel = ViewModel()
     @Environment(\.managedObjectContext) var context
-    @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "word", ascending: true)], animation: .spring()) var resuts: FetchedResults<Task>
+    @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "word", ascending: true)], animation: .spring()) var words: FetchedResults<Task>
     var body: some View {
         GeometryReader { g in
             VStack {
@@ -18,9 +18,9 @@ struct PlayWordsView: View {
                 HStack {
                     Spacer()
                     ZStack {
-                        ForEach(0..<viewModel.cards.count) { index in
-                            if !viewModel.cards[index].matchUp {
-                                Card(card: viewModel.cards[viewModel.cardRandomName()], frame: g.frame(in: .global))
+                        ForEach(0..<words.count) { index in
+                            if !words[index].matchUp {
+                                Card(frame: g.frame(in: .global), data: words[index])
                             }
                         }
                     }
