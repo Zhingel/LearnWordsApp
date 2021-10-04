@@ -66,6 +66,7 @@ struct AllCardsView: View {
                             .frame(width: 200, height: 40, alignment: .center)
                             Button("Save") {
                                 viewModel.writeData(context: context)
+                                isNewCard.toggle()
                             }
                             Spacer()
                         }
