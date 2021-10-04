@@ -10,6 +10,8 @@ import SwiftUI
 struct Card: View {
     @State var card: Word
     var frame: CGRect
+    @Environment(\.managedObjectContext) var context
+    var data : Task!
     var body: some View {
         ZStack {
             RoundedRectangle(cornerSize: CGSize(width: 10, height: 10))

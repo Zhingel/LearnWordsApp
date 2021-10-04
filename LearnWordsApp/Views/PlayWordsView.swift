@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct PlayWordsView: View {
-    @ObservedObject var viewModel = ViewModel()
+    @StateObject var viewModel = ViewModel()
+    @Environment(\.managedObjectContext) var context
+    @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "word", ascending: true)], animation: .spring()) var resuts: FetchedResults<Task>
     var body: some View {
         GeometryReader { g in
             VStack {
