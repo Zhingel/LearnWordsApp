@@ -39,7 +39,7 @@ struct AllCardsView: View {
                                 viewModel.delete(context: context, item: card)
                             }
                             .onTapGesture {
-                                
+                                viewModel.shuffleArray(context: context)
                             }
                         }
                     }
