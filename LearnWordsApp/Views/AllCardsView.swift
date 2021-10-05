@@ -11,9 +11,11 @@ struct AllCardsView: View {
     @State var isNewCard = false
     @State var isChangeCard = false
     @State var text = ""
+    @State var toggle = false
     @StateObject var viewModel = ViewModel()
     @Environment(\.managedObjectContext) var context
-    @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "word", ascending: true)], animation: .spring()) var words: FetchedResults<Task>
+    @FetchRequest(entity: Task.entity(), sortDescriptors: [NSSortDescriptor(key: "word", ascending: true)], animation: .spring())
+    var words: FetchedResults<Task>
     var columns: [GridItem] =
             Array(repeating: .init(.flexible()), count: 2)
     var body: some View {
@@ -34,17 +36,16 @@ struct AllCardsView: View {
                                         .padding(3)
                                 }
                             }
+                            .onTapGesture {
+                                toggle.toggle()
+                            }
                             .onLongPressGesture {
                              //   isChangeCard.toggle()
                                 viewModel.delete(context: context, item: card)
                             }
-                            .onTapGesture {
-                                viewModel.shuffleArray(context: context)
-                            }
                         }
                     }
                 }
-                .padding()
                 .blur(radius: isNewCard  || isChangeCard ? 6 : 0)
                 .opacity(isNewCard || isChangeCard ? 0.6 : 1)
                 if isNewCard {
@@ -53,6 +54,14 @@ struct AllCardsView: View {
                 if isChangeCard {
                  ChangeCard(isChangeCard: $isChangeCard)
                 }
+// MARK: - testing
+                if toggle {
+           
+                    Text("")
+                }
+                
+//MARK: - 
+                
             }
                 .toolbar {
                     Button(action: {
